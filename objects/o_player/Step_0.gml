@@ -1,3 +1,5 @@
+// ME ENCANTA EL FORNITE LO JUEGO TODO EL DIA ESTO NO ES MINECRAFT ME ENCANTA QUE BUENO
+
 // ------- INPUT ------
 
 if (keyboard_check(ord("D")))
