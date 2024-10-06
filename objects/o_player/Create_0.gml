@@ -21,3 +21,7 @@ coyote_c = 1;
 
 
 right = 1;
+
+// Powers
+
+crystalPow = 0;
