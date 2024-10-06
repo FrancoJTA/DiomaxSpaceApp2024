@@ -179,3 +179,6 @@ if (collision_rectangle(x - 17, y - 20, x - 16, y - 21, o_walljump_block, 0, 1))
     }
 }
 
+//Capture information
+
+
