@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_crystal_gen",
-  "spriteId": null,
+  "name": "o_portal",
+  "spriteId": {
+    "name": "s_portal_crystal",
+    "path": "sprites/s_portal_crystal/s_portal_crystal.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -22,13 +25,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Crystal",
-    "path": "folders/Objects/Crystal.yy",
+    "name": "Level",
+    "path": "folders/Objects/Level.yy",
   },
 }

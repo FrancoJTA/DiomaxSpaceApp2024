@@ -22,6 +22,9 @@ coyote_c = 1;
 
 right = 1;
 
+resx = 0;
+resy = 0; 
+
 // Powers
 
-crystalPow = 0;
+crystalPow = 1;

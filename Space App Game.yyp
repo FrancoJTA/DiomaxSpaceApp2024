@@ -31,6 +31,7 @@
     {"id":{"name":"o_control","path":"objects/o_control/o_control.yy",},"order":0,},
     {"id":{"name":"o_game_start","path":"objects/o_game_start/o_game_start.yy",},"order":1,},
     {"id":{"name":"s_boom","path":"sprites/s_boom/s_boom.yy",},"order":0,},
+    {"id":{"name":"o_portal","path":"objects/o_portal/o_portal.yy",},"order":7,},
     {"id":{"name":"o_planet_crystal","path":"objects/o_planet_crystal/o_planet_crystal.yy",},"order":5,},
     {"id":{"name":"s_trans_l","path":"sprites/s_trans_l/s_trans_l.yy",},"order":4,},
     {"id":{"name":"s_crystal_block","path":"sprites/s_crystal_block/s_crystal_block.yy",},"order":9,},

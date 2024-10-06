@@ -2,8 +2,8 @@
 
 if(y > room_height + 64)
 {
-	x = 100;
-	y = 200;
+	x = resx;
+	y = resy;
 }
 
 // ------- INPUT ------
