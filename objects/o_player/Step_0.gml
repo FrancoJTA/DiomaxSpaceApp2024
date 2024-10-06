@@ -70,11 +70,11 @@ if (keyboard_check(ord("A")) and keyboard_check(ord("D"))) x_speed=0; //Podria p
 
 
 // --------------- MARSHMALLOW -----------
-if (alarm[1] == 0 && ground && !sinking ) {
+if (alarm[1] == 0 && ground && !sinking && marsh_world ) {
     sinking = 1;
 }
 
-if (sinking) {
+if (sinking && marsh_world) {
 	expulsion = 1;
     y += sinking_speed * 0.5;
 }
@@ -190,7 +190,7 @@ if (collision_rectangle(x + 16, y - 20, x + 17, y - 21, o_walljump_block, 0, 1))
         x_speed = 0;
         y_speed = 0;
         wall_stick = 1;
-        right_wall = 1;
+        right_wall = 1; 
     }
 }
 

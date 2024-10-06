@@ -32,6 +32,8 @@ idle_time = 0;
 expulsion = 0;
 combo = 1;
 
+marsh_world = 0;
+
 //Climb
 wall_stick = false; 
 right_wall = false;
