@@ -1,3 +1,11 @@
+// ME ENCANTA EL FORNITE LO JUEGO TODO EL DIA ESTO NO ES MINECRAFT ME ENCANTA QUE BUENO
+
+if(y > room_height + 64)
+{
+	x = 100;
+	y = 200;
+}
+
 // ------- INPUT ------
 
 if (keyboard_check(ord("D")))
@@ -50,6 +58,13 @@ if (keyboard_check_released(vk_space))
 	if(y_speed < 0) y_speed = 0;	
 }
 
+//-- Crear plataformas --//
+
+if(keyboard_check_pressed(vk_shift) and crystalPow and !ground)
+{
+	drop = instance_create_layer(x,y,"instances",o_crystal_drop);
+	if (image_xscale == 1) drop.image_xscale = 1; else drop.image_xscale = -1;
+}
 
 // ------- MOVIMIENTO -------
 if(x_speed != 0)
