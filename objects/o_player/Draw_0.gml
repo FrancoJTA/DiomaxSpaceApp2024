@@ -18,5 +18,7 @@ else image_xscale=-1;
 
 if(!crouch) mask_index=s_player_mask; else mask_index=s_player_crouch_mask;
 
+draw_set_color(c_black);
+draw_text(x,y-100,string(x_speed));
 
 draw_self();

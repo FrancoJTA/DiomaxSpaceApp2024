@@ -8,10 +8,12 @@ if (keyboard_check(ord("D")))
 }
 
 if (keyboard_check(ord("A")))
-{      
+{
+	if(!portal_jump){
 	if(x_speed > 0)	x_speed = 0;
 	if(x_speed > -x_speed_max) x_speed -= x_accel;
 	right=0;
+	}
 }
 
 if (!keyboard_check(ord("A")) and !keyboard_check(ord("D"))) x_speed=0;
@@ -32,7 +34,6 @@ else
 	crouch = 0;
 	weapon_mody = -25;
 }
-
 // ----------- JUMP --------------
 if (keyboard_check_pressed(vk_space))
 {
@@ -50,6 +51,22 @@ if (keyboard_check_released(vk_space))
 	if(y_speed < 0) y_speed = 0;	
 }
 
+// ------------ Slow ---------------
+
+if(planet_fast){
+	x_accel=0.8;
+	
+	if(x_speed>-9) x_speed -= fast_acc;;
+}
+
+if(planet_slow){
+	
+}
+// ------------ Portal Jump
+if(portal_jump){
+	
+	if(x_speed>-7) x_speed-=3;
+}
 
 // ------- MOVIMIENTO -------
 if(x_speed != 0)
@@ -68,6 +85,7 @@ if(y_speed != 0)
 
 if (!place_free(x,y+1)){
 	ground=1;
+	portal_jump=0;
 	y_speed=0;
 	coyote_c=1;
 }

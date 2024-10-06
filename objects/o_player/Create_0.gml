@@ -21,3 +21,15 @@ coyote_c = 1;
 
 
 right = 1;
+
+// --------- planet_fast
+
+planet_fast=0;
+fast_acc=0.6;
+
+portal_jump=0;
+
+// --------- planet_fast
+
+planet_slow=1;
+
