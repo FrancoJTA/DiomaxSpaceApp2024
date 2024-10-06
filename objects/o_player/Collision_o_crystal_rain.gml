@@ -1,2 +1,2 @@
-/*x = resx;
-y = resy;*/
+x = resx;
+y = resy;
