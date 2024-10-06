@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_light",
+  "name": "o_light2",
   "spriteId": {
-    "name": "s_light2",
-    "path": "sprites/s_light2/s_light2.yy",
+    "name": "s_light",
+    "path": "sprites/s_light/s_light.yy",
   },
   "solid": false,
   "visible": true,

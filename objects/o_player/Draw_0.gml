@@ -19,4 +19,7 @@ else image_xscale=-1;
 if(!crouch) mask_index=s_player_mask; else mask_index=s_player_crouch_mask;
 
 
+
+
+// Dibuja el jugador
 draw_self();

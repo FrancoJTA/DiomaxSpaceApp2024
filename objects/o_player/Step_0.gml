@@ -203,3 +203,9 @@ if (collision_rectangle(x - 17, y - 20, x - 16, y - 21, o_walljump_block, 0, 1))
         right_wall = 0;
     }
 }
+
+// Simulación de parpadeo de la luz
+light_alpha += random_range(-flicker_speed, flicker_speed);
+
+// Limita la transparencia para que no se salga de los valores permitidos
+light_alpha = clamp(light_alpha, 0.6, 1.0);

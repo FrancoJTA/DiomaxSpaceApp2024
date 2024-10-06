@@ -37,3 +37,8 @@ marsh_world = 0;
 //Climb
 wall_stick = false; 
 right_wall = false;
+
+// Declarar la surface como una variable
+surf_light = -1; // Inicializa la variable de la surface
+light_alpha = 0.8; // Inicializamos el valor de transparencia
+flicker_speed = 0.02; // Velocidad del parpadeo (ajústala según desees)
