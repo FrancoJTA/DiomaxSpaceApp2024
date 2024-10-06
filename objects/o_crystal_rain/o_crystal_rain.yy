@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_crystal_rain",
   "spriteId": {
-    "name": "s_pistol_1",
-    "path": "sprites/s_pistol_1/s_pistol_1.yy",
+    "name": "s_crystal_rain_1",
+    "path": "sprites/s_crystal_rain_1/s_crystal_rain_1.yy",
   },
   "solid": false,
   "visible": true,
