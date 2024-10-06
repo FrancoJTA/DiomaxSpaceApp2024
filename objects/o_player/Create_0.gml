@@ -21,4 +21,17 @@ coyote_c = 1;
 
 
 right = 1;
-//hola soy diogo
+
+
+
+//Marsmellow
+sinking = false; 
+sinking_speed = 1;
+sinking_timer = 180; 
+idle_time = 0; 
+expulsion = 0;
+combo = 1;
+
+//Climb
+wall_stick = false; 
+right_wall = false;
