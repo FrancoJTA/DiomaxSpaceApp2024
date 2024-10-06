@@ -1,0 +1,1 @@
+target_room=test_boss_room;
