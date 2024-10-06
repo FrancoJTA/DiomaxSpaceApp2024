@@ -21,3 +21,4 @@ coyote_c = 1;
 
 
 right = 1;
+//hola soy diogo
