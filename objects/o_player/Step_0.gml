@@ -3,15 +3,8 @@
 if (keyboard_check(ord("D")))
 {      
 	if(x_speed < 0) x_speed = 0;
-	
-	if (crouch == 1) {
-		if (x_speed > x_speed_max * 0.3) x_speed = x_speed_max * 0.3;
-        if (x_speed <= x_speed_max * 0.3) x_speed += x_accel * 0.3;
-    } 
-	else 
-	{
-        if (x_speed <= x_speed_max) x_speed += x_accel;
-    }
+    if (x_speed <= x_speed_max) x_speed += x_accel;
+    
 	right=1;
 	
 	sinking = 0; 
@@ -32,15 +25,8 @@ if (keyboard_check(ord("D")))
 if (keyboard_check(ord("A")))
 {      
 	if(x_speed > 0)	x_speed = 0;
+    if (x_speed >= -x_speed_max) x_speed -= x_accel;
 	
-	if (crouch == 1) {
-		if (x_speed < -x_speed_max * 0.3) x_speed = -x_speed_max * 0.3;
-        if (x_speed >= -x_speed_max * 0.3) x_speed -= x_accel * 0.3;
-    } 
-	else 
-	{
-        if (x_speed >= -x_speed_max) x_speed -= x_accel;
-    }
 	right=0;
 	
 	sinking = 0; 
@@ -61,12 +47,19 @@ if (keyboard_check(ord("A")))
 if (!keyboard_check(ord("A")) and !keyboard_check(ord("D"))){
 	x_speed=0;	
 	if (ground && !sinking) { 
-            if (alarm[1] == -1) { 
-                alarm[1] = sinking_timer; 
-            }
+        if (alarm[1] == -1) { 
+			alarm[1] = sinking_timer; 
         }
+    }
 } 
-if (keyboard_check(ord("A")) and keyboard_check(ord("D"))) x_speed=0; //Podria ponerse el hundimiento igual?
+if (keyboard_check(ord("A")) and keyboard_check(ord("D"))){
+	x_speed=0; 
+	if (ground && !sinking) { 
+        if (alarm[1] == -1) { 
+			alarm[1] = sinking_timer; 
+        }
+    }
+} 
 
 
 // --------------- MARSHMALLOW -----------
@@ -78,24 +71,8 @@ if (sinking && marsh_world) {
 	expulsion = 1;
     y += sinking_speed * 0.5;
 }
-// -------------- CROUCH -----------------
 
-if(keyboard_check(ord("S")))
-{
-	if(ground)
-	{
-		crouch = 1;
-		weapon_mody = -14;
-		
-		sinking = 0; 
-        alarm[1] = sinking_timer;
-	} 
-}
-else
-{
-	crouch = 0;
-	weapon_mody = -25;
-}
+
 
 // ----------- JUMP --------------
 if (keyboard_check_pressed(vk_space))
@@ -117,8 +94,7 @@ if (keyboard_check_pressed(vk_space))
             wall_stick = 0;
         }
 		
-		if(crouch and place_free(x,y+1)) y+=1;
-		else y_speed = -jump_power;
+		y_speed = -jump_power;
 		
 		sinking = false;
         alarm[1] = sinking_timer;
@@ -151,7 +127,6 @@ if (!place_free(x,y+1)){
 	coyote_c=1;
 }
 else{
-	crouch=0;
 	ground=0;
 	y_speed+=grav;
 	if(coyote_c and alarm[11]==-1) alarm[11]=coyote_t;
@@ -204,8 +179,3 @@ if (collision_rectangle(x - 17, y - 20, x - 16, y - 21, o_walljump_block, 0, 1))
     }
 }
 
-// Simulación de parpadeo de la luz
-light_alpha += random_range(-flicker_speed, flicker_speed);
-
-// Limita la transparencia para que no se salga de los valores permitidos
-light_alpha = clamp(light_alpha, 0.6, 1.0);

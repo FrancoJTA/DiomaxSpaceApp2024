@@ -1,10 +1,7 @@
 // SPRITE CHECKS ---------------
 if(ground){
 	if(x_speed==0){
-		if(!crouch)
 		sprite_index=s_idle;
-		else
-		sprite_index=s_crouch;
 	}
 	else sprite_index=s_walk;
 }
@@ -16,10 +13,9 @@ else{
 if(right) image_xscale=1;
 else image_xscale=-1;
 
-if(!crouch) mask_index=s_player_mask; else mask_index=s_player_crouch_mask;
+mask_index=s_player_mask; 
 
 
 
 
-// Dibuja el jugador
 draw_self();

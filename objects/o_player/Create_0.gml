@@ -5,7 +5,7 @@ x_accel = 0.5;
 
 
 ground = 0;
-crouch = 0;
+
 
 y_speed = 0;
 fall_max = 11;
