@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_portal_slowfast",
   "spriteId": {
-    "name": "s_p_fast",
-    "path": "sprites/s_p_fast/s_p_fast.yy",
+    "name": "s_p_fast_1",
+    "path": "sprites/s_p_fast_1/s_p_fast_1.yy",
   },
   "solid": false,
   "visible": true,

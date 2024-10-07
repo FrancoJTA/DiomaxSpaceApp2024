@@ -1,0 +1,2 @@
+x = resx;
+y = resy;

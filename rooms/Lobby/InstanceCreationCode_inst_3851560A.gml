@@ -1,1 +1,1 @@
-target_room=r_slowfast;
+target_room=Test_Room;
