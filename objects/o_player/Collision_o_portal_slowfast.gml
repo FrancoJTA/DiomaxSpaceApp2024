@@ -1,0 +1,20 @@
+if(portal_jump==0){
+x_speed=0;
+right=0;
+portal_jump=1;
+if(planet_fast){
+	y_speed=-3;
+	planet_fast=0;
+	planet_slow=1;
+	o_player.grav=0.3;
+	x_accel = 0.3;
+	fall_max=2;
+}
+else{
+	y_speed=-jump_power-4;
+	planet_fast=1;
+	planet_slow=0;
+	o_player.grav=1;
+	fall_max=11;
+}
+}
